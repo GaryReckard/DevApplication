@@ -28,7 +28,7 @@ You should fork this repo on GitHub and do the work on that repo.  Just do a pul
 * [SlimPHP 2 Framework](https://docs.slimframework.com/)
 * [Twig Templates](http://twig.sensiolabs.org/)
 * Database (Mysql or MSSQL)
-* (Assessment Document)[https://www.puc.edu/__data/assets/pdf_file/0003/13395/Learning-Styles-Inventory.pdf]
+* [Assessment Document](https://www.puc.edu/__data/assets/pdf_file/0003/13395/Learning-Styles-Inventory.pdf)
 
 
 # Optional (But probably helpful)
