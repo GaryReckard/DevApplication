@@ -29,6 +29,7 @@ You should fork this repo on GitHub and do the work on that repo.  Just do a pul
 * [Twig Templates](http://twig.sensiolabs.org/)
 * Database (Mysql or MSSQL)
 * [Assessment Document](https://www.puc.edu/__data/assets/pdf_file/0003/13395/Learning-Styles-Inventory.pdf)
+  * assessment questions are in repo as excel doc.
 
 
 # Optional (But probably helpful)
