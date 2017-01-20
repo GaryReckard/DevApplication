@@ -1,0 +1,16 @@
+{
+	"name": "vjs-assessment",
+	"description": "A test project for VirtualJobShadow",
+	"authors": [
+		{
+			"name": "Gary Reckard",
+			"email": "greckard@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.5.0",
+		"slim/slim": "2.*",
+		"slim/views": "0.1.*",
+		"twig/twig": "~1.0"
+	}
+}
