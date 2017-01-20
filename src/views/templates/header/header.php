@@ -24,12 +24,12 @@
 	</div>
 
 </div>
-	{% if flash %}
-		<div class="container">
-			{% for type, message in flash %}
-				<div class="alert alert-{{ type }}" role="alert">
-					{{ message }}
-				</div>
-			{% endfor %}
-		</div>
-	{% endif %}
+{% if flash %}
+	<div class="container">
+		{% for type, message in flash %}
+			<div class="alert alert-{{ type }}" role="alert">
+				{{ message }}
+			</div>
+		{% endfor %}
+	</div>
+{% endif %}

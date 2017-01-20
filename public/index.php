@@ -46,7 +46,60 @@ if($logged_in == true){
 
 	$app->get('/', function () use ($app){
 
-		$app->render('pages/home/index.php', array('logged_in' => true));
+		$assessment_id = 1; //Only one for now
+		$questions = array();
+
+		//get questions for assessment
+		$link = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_SCHEMA);
+
+		if (!$link) {
+			//throw slim exception?
+			echo "Error: Unable to connect to MySQL." . PHP_EOL;
+			echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+			echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+			exit;
+		}
+
+		/* create a prepared statement */
+		$stmt = $link->prepare("
+			SELECT 
+				`id`, 
+				`order`, 
+				`question`
+			FROM 
+				questions 
+			WHERE 
+				assessment_id = ?
+			ORDER BY
+				`order` ASC
+		");
+
+		/* bind parameters for markers */
+		$stmt->bind_param("s", $assessment_id);
+
+		/* execute query */
+		$stmt->execute();
+
+		/* bind result variables */
+		$stmt->bind_result($id, $order, $question);
+
+		/* fetch value */
+		while ($stmt->fetch()) {
+			$questions[$id] = array('order' => $order, 'question' => $question);
+		}
+
+		/* close statement */
+		$stmt->close();
+
+		/* close mysqli connection */
+		mysqli_close($link);
+
+
+
+		$app->render('pages/home/index.php', array(
+			'logged_in' => true,
+			'questions' => $questions
+		));
 
 	});
 
@@ -83,6 +136,8 @@ else{
 				users 
 			WHERE 
 				username = ?
+			LIMIT
+				1
 		");
 
 		/* bind parameters for markers */
