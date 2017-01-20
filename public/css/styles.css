@@ -6,7 +6,7 @@ body {
 }
 
 .navbar{
-
+	background-color: rgba(255,255,255,0.85);
 }
 
 .jumbotron {
@@ -90,11 +90,50 @@ body {
 
 .questions{
 	padding: 0px;
-	margin: 0px;
+	margin: 0px 0px 30px 0px;
 	list-style-type: none;
 	text-align: left;
 }
+.questions > li{
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+}
 
+.questions > li:nth-child(even) {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.questions > li:nth-child(odd) {
+	background-color: rgba(255,255,255,0.1);
+}
+
+.questions > li:hover {
+	background-color: rgba(0,0,0,0.4);
+}
+
+.question{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 4px 14px;
+}
+
+.question-number{
+	width: 60px;
+	font-weight: bold;
+	font-size: 22px;
+	font-family: monospace;
+	text-align: center;
+	color: #ddd;
+}
+.question-text{
+	flex: 1;
+	font-size: 16px;
+	padding: 4px 6px;
+}
 
 
 .tgl {

@@ -4,7 +4,7 @@
 	<div class="container">
 		
 		<!-- Navbar Header -->
-		<div class="navbar-header col-sm-4 col-md-4 col-lg-4">
+		<div class="navbar-header col-xs-8 col-sm-6">
 			
 			<a class="navbar-brand">
 				VJS <strong>Ass</strong>essment
